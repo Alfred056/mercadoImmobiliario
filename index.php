@@ -27,4 +27,9 @@ $en  = glob(__DIR__."/src/repository/*.php");$lon = count($en);for($i=0; $i<$lon
 $en  = glob(__DIR__."/src/controller/*.php");$lon = count($en);for($i=0; $i<$lon; $i++){ require $en[$i]; }
 $en  = glob(__DIR__."/src/router/*.php");$lon = count($en);for($i=0; $i<$lon; $i++){ require $en[$i]; }
 
+$app->get('/', function ($request, $response) {
+    return $response->withHeader('Location', '/v1/pdf')->withStatus(302);
+});
+
+
 $app->run();

@@ -44,7 +44,7 @@
             $codigos        = $repoSerie->listarSeriesTipo(4);
           
             $data           = $repoBcr->ejecutarConsultar('GET',$codigos,'2021-1','2021-1');
-            $PrecioM2Data   = $repoBcr->ejecutarConsultar('GET','PD37944PQ','2021-1','2021-1');
+            $PrecioM2Data   = $repoBcr->ejecutarConsultar('GET','PD37944PQ','2024-1','2024-1');
             $TipoCambio     = $repoSbs->obtenerTipoCambio();
             $DataOsei       = $repoOsei->listarData($ANIO);
             $dataOptima     = $repoVenta->minutasActuales($ANIO);
